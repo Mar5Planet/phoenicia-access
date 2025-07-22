@@ -1,0 +1,20 @@
+.section-block {
+  margin: 10rem 0;
+}
+
+.section-caption {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-caption img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.caption-text {
+  line-height: 1.4;
+}

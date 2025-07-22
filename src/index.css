@@ -1,0 +1,9 @@
+.paragraph {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
