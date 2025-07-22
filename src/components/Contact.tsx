@@ -38,17 +38,21 @@ export default function Contact() {
         <Title level={2}>Contact Phoenicia Access Group</Title>
         <Paragraph className="contact-subheading">We’re here to help you.</Paragraph>
 
-        <Form form={form} layout="vertical" onFinish={onFinish} className="contact-form">
+         <Form form={form} layout="vertical" onFinish={onFinish} className="contact-form">
           <Form.Item label="Name" name="name" rules={[{ required: true }]}>
-            <Input placeholder="Jane Smith" className="contact-input" />
+            <Input placeholder="e.g., Jane Smith" className="contact-input" />
           </Form.Item>
 
           <Form.Item label="Email" name="email" rules={[{ required: true, type: 'email' }]}>
-            <Input placeholder="jane@doe.com" className="contact-input" />
+            <Input placeholder="e.g., jane@company.com" className="contact-input" />
           </Form.Item>
 
           <Form.Item label="Message" name="message" rules={[{ required: true }]}>
-            <Input.TextArea rows={4} placeholder="Your message..." className="contact-input" />
+            <Input.TextArea
+              rows={4}
+              placeholder="Tell us about your project or how we can help..."
+              className="contact-input"
+            />
           </Form.Item>
 
           <Form.Item>

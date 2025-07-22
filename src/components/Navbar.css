@@ -26,7 +26,7 @@
 }
 
 @media (max-width: 695px) {
-  .navbar-links a {
+    .navbar-header {
     display: none;
   }
 }
