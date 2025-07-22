@@ -7,17 +7,17 @@ const services = [
   {
     title: 'Land sourcing',
     description: 'Strategic industrial & commercial plots selected for your needs.',
-    image: '/land.jpg',
+    image: 'land.jpg',
   },
   {
     title: 'Design & construction',
     description: 'Architectural plans and project management in compliance with local laws.',
-    image: '/construction.jpg',
+    image: 'construction.jpg',
   },
   {
     title: 'Staff & admin setup',
     description: 'Hire and train local talent, handle permits, and establish administrative structure.',
-    image: '/staff.jpg',
+    image: 'staff.jpg',
   },
 ]
 

@@ -9,7 +9,7 @@ export default function AppFooter() {
     <Footer className="app-footer">
       <div className="footer-inner">
         <a href="#">
-            <img src="/logo.png" alt="Phoenicia Logo" className="footer-logo" />
+            <img src="logo.png" alt="Phoenicia Logo" className="footer-logo" />
         </a>
         <div className="footer-info">
           <Text type="secondary">
