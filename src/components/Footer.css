@@ -10,6 +10,11 @@
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 2rem;
+  direction: ltr;
+}
+
+html[dir="rtl"] .footer-inner {
+  direction: rtl;
 }
 
 .footer-logo {
@@ -21,12 +26,17 @@
   min-width: 200px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #888;
+  order: 2;
 }
 
 .footer-links {
   display: flex;
   gap: 3rem;
   flex-wrap: wrap;
+  order: 3;
 }
 
 .footer-nav,
@@ -34,6 +44,15 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.footer-nav a {
+  color: #1890ff;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
 }
 
 /* Responsive */
@@ -45,6 +64,16 @@
   .footer-inner {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .footer-info {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  html[dir="rtl"] .footer-info {
+    justify-content: flex-end;
+    text-align: right;
   }
 
   .footer-links {

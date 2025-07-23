@@ -1,6 +1,7 @@
 import { Form, Input, Button, Typography, Modal } from 'antd'
 import emailjs from 'emailjs-com'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import './Contact.css'
 
 const { Title, Paragraph } = Typography
@@ -8,6 +9,7 @@ const { Title, Paragraph } = Typography
 export default function Contact() {
   const [form] = Form.useForm()
   const [modalVisible, setModalVisible] = useState(false)
+  const { t } = useTranslation()
 
   const onFinish = (values: any) => {
     const templateParams = {
@@ -35,43 +37,43 @@ export default function Contact() {
   return (
     <>
       <div className="contact-container">
-        <Title level={2}>Contact Phoenicia Access Group</Title>
-        <Paragraph className="contact-subheading">We’re here to help you.</Paragraph>
+        <Title level={2}>{t('contact_title')}</Title>
+        <Paragraph className="contact-subheading">{t('contact_subheading')}</Paragraph>
 
-         <Form form={form} layout="vertical" onFinish={onFinish} className="contact-form">
-          <Form.Item label="Name" name="name" rules={[{ required: true }]}>
-            <Input placeholder="e.g., Jane Smith" className="contact-input" />
+        <Form form={form} layout="vertical" onFinish={onFinish} className="contact-form">
+          <Form.Item label={t('form.name')} name="name" rules={[{ required: true }]}>
+            <Input placeholder={t('form.name_placeholder')} className="contact-input" />
           </Form.Item>
 
-          <Form.Item label="Email" name="email" rules={[{ required: true, type: 'email' }]}>
-            <Input placeholder="e.g., jane@company.com" className="contact-input" />
+          <Form.Item label={t('form.email')} name="email" rules={[{ required: true, type: 'email' }]}>
+            <Input placeholder={t('form.email_placeholder')} className="contact-input" />
           </Form.Item>
 
-          <Form.Item label="Message" name="message" rules={[{ required: true }]}>
+          <Form.Item label={t('form.message')} name="message" rules={[{ required: true }]}>
             <Input.TextArea
               rows={4}
-              placeholder="Tell us about your project or how we can help..."
+              placeholder={t('form.message_placeholder')}
               className="contact-input"
             />
           </Form.Item>
 
           <Form.Item>
             <Button type="primary" htmlType="submit" className="contact-submit">
-              Contact Us
+              {t('contact_us')}
             </Button>
           </Form.Item>
         </Form>
       </div>
 
       <Modal
-        title="Thank you!"
+        title={t('contact_modal_title')}
         open={modalVisible}
         onOk={() => setModalVisible(false)}
         onCancel={() => setModalVisible(false)}
         centered
         footer={null}
       >
-        <p>We received your email and will get back to you shortly.</p>
+        <p>{t('contact_modal_message')}</p>
       </Modal>
     </>
   )

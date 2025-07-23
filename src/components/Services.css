@@ -23,6 +23,11 @@
   min-width: 260px;
 }
 
+/* 🔁 Right-align text when language is RTL */
+[dir="rtl"] .service-text {
+  text-align: right;
+}
+
 .service-image {
   flex: 1;
   min-width: 260px;

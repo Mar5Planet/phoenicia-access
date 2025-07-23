@@ -1,27 +1,30 @@
 import { Typography } from 'antd'
 import './Services.css'
+import { useTranslation } from 'react-i18next'
 
 const { Title, Paragraph } = Typography
 
-const services = [
-  {
-    title: 'Land sourcing',
-    description: 'Strategic industrial & commercial plots selected for your needs.',
-    image: 'land.jpg',
-  },
-  {
-    title: 'Design & construction',
-    description: 'Architectural plans and project management in compliance with local laws.',
-    image: 'construction.jpg',
-  },
-  {
-    title: 'Staff & admin setup',
-    description: 'Hire and train local talent, handle permits, and establish administrative structure.',
-    image: 'staff.jpg',
-  },
-]
-
 export default function Services() {
+  const { t } = useTranslation()
+
+  const services = [
+    {
+      title: t('services_menu.land_title'),
+      description: t('services_menu.land_desc'),
+      image: 'land.jpg',
+    },
+    {
+      title: t('services_menu.design_title'),
+      description: t('services_menu.design_desc'),
+      image: 'construction.jpg',
+    },
+    {
+      title: t('services_menu.staff_title'),
+      description: t('services_menu.staff_desc'),
+      image: 'staff.jpg',
+    },
+  ]
+
   return (
     <section className="services" style={{ marginBottom: '6rem' }}>
       {services.map((service, index) => (

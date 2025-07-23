@@ -9,6 +9,11 @@
   gap: 1rem;
 }
 
+.section-caption.rtl {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
 .section-caption img {
   width: 120px;
   height: auto;
