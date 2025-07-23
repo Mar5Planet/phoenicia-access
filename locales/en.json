@@ -56,5 +56,10 @@
     "rights": "All rights reserved.",
     "navigate": "Navigate",
     "contact": "Contact"
-  }
+  },
+  "calendly": {
+  "title": "Book a Call",
+  "subtitle": "Schedule a quick time to speak with us directly.",
+  "button": "Book Now"
+}
 }
