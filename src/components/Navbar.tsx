@@ -16,7 +16,9 @@ export default function Navbar() {
   return (
     <Header className="navbar-header">
       <div className="navbar-container">
-        <img src="/logo.png" alt="Phoenicia Logo" className="navbar-logo" />
+        <a href='#'>
+            <img src="/logo.png" alt="Phoenicia Logo" className="navbar-logo" />
+        </a>
 
         <nav className={`navbar-links ${menuOpen ? 'open' : ''}`}>
           <a href="#about" onClick={() => setMenuOpen(false)}>{t('about')}</a>
